@@ -18,11 +18,18 @@ namespace WpfTekstVerwerken
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowText : Window
     {
-        public MainWindow()
+        public WindowText()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            textBlockAanmelding.TextWrapping = TextWrapping.Wrap;
+            textBlockAanmelding.Text = "Je probeerde aan te melden met: " + textBoxGebruikersnaam.Text + " en paswoord: " + pdsBox.Password;
+        }
+
     }
 }
